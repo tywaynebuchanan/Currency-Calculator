@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 <h1> Currency Calculator</h1>
 <p> Choose the currency and the amount to get the exchange rate</p>
 	<div class="wrapper">
-		<select id="select_one">
+		<select id="select_one" onchange="ChangeCurrency2()">
 			<option selected="USD" value="USD">USD</option>
 			<option value="JMD">JMD</option>
 			<option value="GDP">GDP</option>
@@ -20,7 +21,7 @@
 			<option value="YEN">YEN</option>
 			<option value="CY">CY</option>
 		</select>
-		<input type="text" name="amount" class="" id="input_one" value="1" onchange="Calculate()">
+		<input type="text" name="amount" class="" id="input_one" value="1" onkeydown="ChangeCurrency()">
 	</div>
 <div>
 	<button class="button" onclick="Swap()"> Swap</button>
@@ -39,4 +40,14 @@
 	
 	</div>
 </body>
+
+<script>
+	
+	document.addEventListener('DOMContentLoaded',function()){
+		document.getElementById("input_one").addEventListener('change',ChangeCurrency);
+		
+
+	}
+
+</script>
 </html>
