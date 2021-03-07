@@ -48,3 +48,11 @@ h1{
 
 	padding: 40px;
 }
+
+.label{
+	text-align: center;
+}
+
+h1,h2{
+	line-height: 0px;
+}
